@@ -11,7 +11,7 @@ banner:
     </div>
 ---
 
-<div class="bg--light">
+<div class="bg--grey-lightest">
   <div class="container">
     <div class="space--xxl"></div>
     <div class="width width--xl text--center">
@@ -31,10 +31,21 @@ banner:
     </div>
     <div class="space--xxl"></div>
   </div>
+
+  <div class="width width--xxl bg--white">
+    <div class="boxpad--xxl">
+      <h4 class="title title--lg text--center">Expert interview</h4>
+      {{page.interview}}
+    </div>
+  </div>
+  <div class="space--xxl"></div>
+
 </div>
+
 
 <div class="vpad--xl">
   <div class="container">
+    <div class="text--center title title--lg">Enter below</div>
     <div id="entry-form" class="vpad--md">
       {% assign form = page.competition-form %}
       <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
@@ -66,4 +77,9 @@ banner:
       </form>
     </div>
   </div>
+</div>
+
+
+<div class="bg--grey-lightest">
+{% include offer/all-offers-dynamic.html sheet=page.offers-sheet limit="6" %}
 </div>
