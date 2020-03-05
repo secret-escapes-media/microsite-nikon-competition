@@ -24,29 +24,13 @@ intro: >
   <div class="container">
 
     <div class="width width--xl text--center">
-      <div class="text--xxl text--bold text--upper text--wide">Where do you want to be to enjoy the golden hour?</div>
-      <div class="space--xs"></div>
-      <h2 class="title title--lg">Win a UK break to the photographic hot-spot of your choice!</h2>
+      <h2 class="title title--lg">Where do you want to be to enjoy the golden hour?</h2>
       <div class="space--xxs"></div>
       <p>Hear from local photographers on why this is the perfect time for a UK break to their region, and get exclusive tips on maximising that extra daylight</p>
-      <div class="space--xxl"></div>
-      <div class="text--xxl text--bold text--upper text--wide">The Prizes:</div>
-    </div>
-    <div class="space--lg"></div>
-    <div class="row row--constant-4-4-4">
-      <div class="col">
-        <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
-      </div>
-      <div class="col">
-        <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
-      </div>
-      <div class="col">
-        <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
-      </div>
     </div>
     <div class="space--lg"></div>
     <div class="row row--6-6">
-      {% assign competitions = site.html_pages | where: 'layout', 'competition' | sort:'nav-order' %}
+      {% assign competitions = site.html_pages | where: 'layout', 'content' | sort:'nav-order' %}
       {% for competition in competitions %}
       <div class="col">
         <div class="bg-img bg-img--1-1">

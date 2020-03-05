@@ -1,0 +1,66 @@
+---
+layout: competition
+id: competition
+nav: true
+nav-order: 4
+nav-title: Competition
+title: Competition
+
+
+banner:
+  content: >
+    <div class="container text--center">
+      <h2 class="title title--xxxl">Win a UK break to the photographic hot-spot of your choice!</h2>
+      <div class="space--xxs"></div>
+      <a href="#enter" class="btn btn--orange">Enter now</a>
+    </div>
+
+intro: >
+  <p class="text--xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur aspernatur beatae tempora, voluptates ut recusandae ea exercitationem culpa mollitia quia similique. Perferendis cumque obcaecati ad pariatur. Quos iure sapiente amet beatae, officiis possimus minima expedita, ea ad. Doloribus et perspiciatis doloremque.</p>
+
+
+competition-form:
+  id: comp
+  post-url: "#getFormUrl"
+  expiry-date: 2050-01-01
+  fields:
+    - id: destination
+      type: radio
+      label: So what will it be, coast or country?
+      required: true
+      options:
+        - id: coast
+          label: 'Coast'
+          value: 'coast'
+        - id: country
+          label: 'Country'
+          value: 'country'
+    - id: opt-in-true
+      label: 'Yes'
+      value: 'yes'
+    - id: opt-in-false
+      label: 'No'
+      value: 'no'
+    - id: name
+      type: text
+      label: Name
+      required: true
+    - id: email
+      type: email
+      label: Email
+      required: true
+    - id: opt-in
+      type: radio
+      label: Would you like to receive emails from our Partner brand?
+      required: true
+      options:
+        - id: opt-in-true
+          label: 'Yes'
+          value: 'yes'
+        - id: opt-in-false
+          label: 'No'
+          value: 'no'
+  submit: Submit Entry
+  terms: >
+    By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition
+---
