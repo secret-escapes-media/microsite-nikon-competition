@@ -5,25 +5,56 @@ nav: true
 nav-order: 1
 title: Overview
 
+banner:
+  title: The Golden Hour
+  title-sub: Just got longer...
+
 intro: >
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam. Asperiores adipisci possimus inventore quia odit aliquam incidunt commodi iste explicabo dolore impedit consequuntur temporibus iusto dolor repudiandae at tempore repellendus, atque hic accusantium doloribus placeat. Dolores provident tempore molestias laborum ad repudiandae.</p>
+  <p class="text--xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam.</p>
+
 
 ---
 
-<div class="container vpad--xxl">
+<div class="container container--xxl vpad--xxl text--center">
   {{page.intro}}
 </div>
+
+
 <div class="bg--grey-lightest vpad--xxl">
   <div class="container">
+
+    <div class="width width--xl text--center">
+      <div class="text--xxl text--bold text--upper text--wide">Where do you want to be to enjoy the golden hour?</div>
+      <div class="space--xs"></div>
+      <h2 class="title title--lg">Win a UK break to the photographic hot-spot of your choice!</h2>
+      <div class="space--xxs"></div>
+      <p>Hear from local photographers on why this is the perfect time for a UK break to their region, and get exclusive tips on maximising that extra daylight</p>
+      <div class="space--xxl"></div>
+      <div class="text--xxl text--bold text--upper text--wide">The Prizes:</div>
+    </div>
+    <div class="space--lg"></div>
+    <div class="row row--constant-4-4-4">
+      <div class="col">
+        <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
+      </div>
+      <div class="col">
+        <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
+      </div>
+      <div class="col">
+        <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
+      </div>
+    </div>
+    <div class="space--lg"></div>
     <div class="row row--6-6">
-      {% assign competitions = site.html_pages | where: 'layout', 'competition' %}
+      {% assign competitions = site.html_pages | where: 'layout', 'competition' | sort:'nav-order' %}
       {% for competition in competitions %}
       <div class="col">
         <div class="bg-img bg-img--1-1">
           <a href="{{site.baseurl}}{{competition.url}}" class="bg-img__link"></a>
           <div class="bg-img__content">
             <div class="boxpad--md">
-              <h4 class="title title--sm">{{competition.title}}</h4>
+              <h4 class="title title--sm">{{competition.overview.title}}</h4>
+              <p class="text--bold">{{competition.overview.content}}</p>
             </div>
           </div>
         </div>

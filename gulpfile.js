@@ -27,7 +27,7 @@ function browserSyncServe() {
     server: {
       baseDir: '_site/',
       routes: {
-        '/template': '_site/'
+        '/uk/2020/nikon-golden-hour': '_site/'
       }
     }
   });
