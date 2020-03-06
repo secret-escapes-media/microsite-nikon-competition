@@ -1,1 +1,7 @@
 // general styles for the project that wouldn't be a reuseable component
+
+.photographer {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 3px 18px 6px rgba($black,0.05);
+}

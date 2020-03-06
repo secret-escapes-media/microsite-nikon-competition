@@ -7,10 +7,10 @@ title: Overview
 
 banner:
   title: The Golden Hour
-  title-sub: Just got longer...
+  title-sub: Just got longer
 
 intro: >
-  <p class="text--xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis a laborum, amet repellat, quasi exercitationem laboriosam quisquam officia voluptatem officiis magnam perferendis iste dolor dolore ipsa illo non pariatur cumque quod delectus nostrum rem facilis! Ipsum, nostrum debitis illum voluptas ad molestias. Dolor repellendus atque aut magni sapiente nam et quas consectetur nulla nemo tempore, alias, quae eius obcaecati voluptas, quos neque, inventore minima officiis reprehenderit ullam.</p>
+  <p class="text--xxl">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
 
 ---
@@ -20,27 +20,30 @@ intro: >
 </div>
 
 
-<div class="bg--grey-lightest vpad--xxl">
+<div class="bg--img-fixed vpad--xxl" style="background-image: url({{site.img}}/content/{{page.id}}/section-bg.jpg);">
   <div class="container">
 
     <div class="width width--xl text--center">
-      <h2 class="title title--lg">Where do you want to be to enjoy the golden hour?</h2>
+      <h2 class="title title--xl text--bold">Where do you want to be to enjoy the golden hour?</h2>
       <div class="space--xxs"></div>
-      <p>Hear from local photographers on why this is the perfect time for a UK break to their region, and get exclusive tips on maximising that extra daylight</p>
+      <p class="text--xl">Hear from local photographers on why this is the perfect time for a UK break to their region, and get exclusive tips on maximising that extra daylight</p>
     </div>
     <div class="space--lg"></div>
     <div class="row row--6-6">
-      {% assign competitions = site.html_pages | where: 'layout', 'content' | sort:'nav-order' %}
-      {% for competition in competitions %}
+      {% assign content-pages = site.html_pages | where: 'layout', 'content' | sort:'nav-order' %}
+      {% for page in content-pages %}
       <div class="col">
-        <div class="bg-img bg-img--1-1">
-          <a href="{{site.baseurl}}{{competition.url}}" class="bg-img__link"></a>
+        <div class="bg-img bg-img--1-1" style="background-image: url({{site.img}}/content/{{page.id}}/banner.jpg);">
+          <a href="{{site.baseurl}}{{page.url}}" class="bg-img__link"></a>
           <div class="bg-img__content">
-            <div class="boxpad--md">
-              <h4 class="title title--sm">{{competition.overview.title}}</h4>
-              <p class="text--bold">{{competition.overview.content}}</p>
+            <div class="boxpad--md text--white">
+              <hr class="hr--center">
+              <h4 class="title title--md title--display text--bold text--wide text--upper">{{page.overview.title}}</h4>
+              <hr class="hr--center">
+              <p class="text--xl">{{page.overview.content}}</p>
             </div>
           </div>
+          <div class="bg-img__overlay"></div>
         </div>
       </div>
       {% endfor %}
@@ -48,3 +51,5 @@ intro: >
   </div>
 </div>
 
+
+  {% include page/promo-competition.html %}

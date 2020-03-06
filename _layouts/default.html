@@ -9,15 +9,15 @@
 
     {% include page/header.html %}
 
-    {% include page/banner.html %}
+    {% if page.layout == "content" %}
+      {% include page/sub-banner.html %}
+    {% else %}
+      {% include page/banner.html %}
+    {% endif %}
 
     <div class="content-spacing section-spacing">
       {{ content }}
     </div>
-
-    {% unless page.layout == "competition" %}
-    {% include page/promo-competition.html %}
-    {% endunless %}
 
     {% include page/footer.html %}
 

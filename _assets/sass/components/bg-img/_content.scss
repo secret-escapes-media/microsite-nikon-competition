@@ -27,15 +27,15 @@
     text-align: center;
     @include page-padding;
   }
-  &__bg-overlay {
+  &__overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: $z-content;
-    background-color: rgba($black,.4);
+    background-color: rgba($black,.2);
     @include transition;
   }
-  &:hover &__bg-overlay { background-color: rgba($black,.6); }
+  &:hover &__overlay { background-color: rgba($black,.4); }
 }
