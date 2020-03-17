@@ -5,3 +5,21 @@
   border-radius: 5px;
   box-shadow: 0 3px 18px 6px rgba($black,0.05);
 }
+
+
+.promo-nikon {
+  &__logo {
+    width: 40%;
+    max-width: 100px;
+    background-image: url('../img/logo/partner.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
+  }
+}

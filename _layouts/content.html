@@ -23,26 +23,25 @@ layout: default
         </div>
         <div class="space--md"></div>
         <div class="title title--sm title--display text--bolder text--upper">{{page.photographer.name}}</div>
-        <p class="text--xl text--center">{{page.photographer.bio}}</p>
+        {% if page.photographer.bio %}<p class="text--xl text--center">{{page.photographer.bio}}</p>{% endif %}
       </div>
 
-      <hr class="hr--center">
-      {{page.photographer.interview}}
       <div class="space--lg"></div>
       <div class="row row--constant-4-4-4 row--gutters-xs">
         <div class="col">
-          <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
-          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
+          <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/1.jpg');"></div>
         </div>
         <div class="col">
-          <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
-          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
+          <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/2.jpg');"></div>
         </div>
         <div class="col">
-          <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg');"></div>
-          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
+          <div class="bg-img bg-img--1-1 bg-img--lg-4-3 bg-img--xxl-3-2" style="background-image: url('{{site.img}}/content/{{page.id}}/3.jpg');"></div>
         </div>
       </div>
+
+      <div class="space--lg"></div>
+      {{page.photographer.interview}}
+
     </div>
   </div>
 
