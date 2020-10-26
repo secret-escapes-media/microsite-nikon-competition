@@ -6,13 +6,13 @@ layout: default
 <div class="width width--xxl">
   <div class="row row--constant-4-4-4 row--gutters-xl">
     <div class="col">
-      <div class="bg-img bg-img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize1.jpg');"></div>
+      <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize1.jpg');"></div>
     </div>
     <div class="col">
-      <div class="bg-img bg-img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize2.jpg');"></div>
+      <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize2.jpg');"></div>
     </div>
     <div class="col">
-      <div class="bg-img bg-img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize3.jpg');"></div>
+      <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize3.jpg');"></div>
     </div>
   </div>
 </div>
@@ -24,22 +24,38 @@ layout: default
   </div>
 
   <div class="vpad--lg text--center">
-    <h2 class="title title--md">Choose your holiday:</h2>
+    <h2 class="title title--md title--display text--upper text--bolder">Choose your holiday:</h2>
   </div>
 
-  <div class="container container--xxxl">
+  <div class="container">
     {% for section in page.sections %}
       <div class="bob{% cycle '', ' bob--swap'%}">
         <div class="bob__img">
-          <div class="bg-img bg-img--16-9" style="background-image: url({{site.img}}/content/{{page.id}}/{{section.id}}.jpg);"></div>
+          <div class="img img--16-9" style="background-image: url({{site.img}}/content/{{page.id}}/{{section.id}}.jpg);"></div>
         </div>
         <div class="bob__text">
           <h4 class="title title--sm text--bold">{{section.title}}</h4>
-          <div class="text--wide text--medium text--upper text--lg">{{section.hotel}}</div>
+          <div class="text--wide text--medium text--upper text--lg text--bold">{{section.hotel}}</div>
           <p>{{section.content}}</p>
         </div>
       </div>
     {% endfor %}
+
+    <div class="vpad--lg text--center">
+      <h2 class="title title--xs title--display text--upper text--bolder">Both prizes include</h2>
+    </div>
+
+    <div class="row row--no-gutters row--valign-center depth--md">
+      <div class="col col--6">
+        <div class="img img--16-9" style="background-image: url({{site.img}}/content/{{page.id}}/nikon.jpg);"></div>
+      </div>
+      <div class="col col--6">
+        <div class="hpad--md">
+          <h4 class="title title--sm text--bold">{{page.nikon.title}}</h4>
+          <p>{{page.nikon.content}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -47,12 +63,12 @@ layout: default
 <div class="bg--grey-lightest">
   <div class="vpad--xl">
     <div class="container">
-      <div class="text--center title title--lg">Enter below</div>
-      <div id="entry-form" class="vpad--md">
+
+      <div id="entry-form" class="vpad--md text--center">
         {% assign form = page.competition-form %}
         <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
           {% include form/messages.html %}
-          <div class="form__content width width--md">
+          <div class="form__content width width--xl">
             {% for item in form.fields %}
               <div class="form__input js-form-input">
                 {% case item.type %}

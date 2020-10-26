@@ -17,56 +17,90 @@ banner:
     </div>
 
 intro: >
-  <p class="text--xl">Whether you choose the delights of the Cornish coast with stylish sea-view digs, or go for the shimmering beauty of the Lakes with country charms in abundance, match your destination with the incredible Nikon Z 50 camera and lens package. Your unmissable photographic escape awaits. Enter below to be in with a chance of winning!  </p>
+  <p class="text--xl">Whether you choose the delights of the Cornish coast with stylish sea-view digs, or go for the shimmering beauty of the Lakes with country charms in abundance, match your destination with the incredible Nikon Z 5 camera and lens package. Your unmissable photographic escape awaits. Enter below to be in with a chance of winning! </p>
 
 
 sections:
   - id: cornwall
     title: Boutique stay in Cornwall
     hotel: Carbis Bay Hotel & Estate, St Ives
-    content: Head for the stunning coastal retreat of Carbis Bay, with a two-night stay in one of the new Junior Beach Suites. With breakfast each morning and two half-hour spa treatments included, sink into seaside luxury.
+    content: Head for the stunning coastal retreat of Carbis Bay, with a two-night stay in one of the new Junior Beach Suites. With a half-hour spa treatment for two and breakfast each morning included, sink into seaside luxury.
   - id: lake-district
     title: Escape to the Lake District
     hotel: Macdonald Old England Hotel & Spa
     content: Delight at the country house charms of Macdonald Old English Hotel & Spa, where for two nights you can indulge in the gorgeous lakeside views over breakfast each morning and a dinner on one night.
-  - id: nikon
-    title: Nikon Z 50 Package
-    content: Go mirrorless with the Nikon Z 50. Shoot your favourite landscapes with this light and agile package, the perfect companion for climbing mountains and capturing gorgeous golden hour scenes. With the ultra-portable NIKKOR Z DX 16-50mm f/3.5-6.3 VR lens, capture the whole scene with stunning detail and depth.
+
+nikon:
+  id: nikon
+  title: Nikon Z 5 Package
+  content: Go full frame and mirrorless with the Nikon Z 5. Shoot your favourite landscapes with this light and agile package, the perfect companion for climbing mountains and capturing gorgeous golden hour scenes. With the ultra-portable NIKKOR Z DX 16-50mm f/3.5-6.3 VR lens, capture the whole scene with stunning detail and depth.
 
 
 competition-form:
   id: comp
-  post-url: "#getFormUrl"
-  expiry-date: 2050-01-01
+  post-url: "https://getform.io/f/8946e419-1da0-4b60-bcbc-da7d8b929c21"
+  expiry-date: 2021-01-01
   fields:
-    - id: destination
+
+    - id: prize
       type: radio
-      label: So what will it be, coast or country?
+      label: So what will it be, Cornwall or the Lake District?
       required: true
       options:
-        - id: coast
-          label: 'Coast'
-          value: 'coast'
-        - id: country
-          label: 'Country'
-          value: 'country'
-    - id: opt-in-true
-      label: 'Yes'
-      value: 'yes'
-    - id: opt-in-false
-      label: 'No'
-      value: 'no'
+        - id: cornwall
+          label: 'Boutique stay in Cornwall'
+          value: 'cornwall'
+        - id: lake-district
+          label: 'Escape to the Lake District'
+          value: 'lake-district'
+
+    - id: photography-interests
+      type: radio
+      label: 'What do you most enjoy taking photos of?'
+      required: true
+      options:
+        - id: natural-world
+          label: The natural world around me
+        - id: people
+          label: The people in my life
+        - id: city
+          label: The city I call home
+
+    - id: photography-or-video
+      type: radio
+      label: 'How do you like to document the world?'
+      required: true
+      options:
+        - id: photography
+          label: All about images
+        - id: video
+          label: I like to make videos too
+
+    - id: photography-reason
+      type: radio
+      label: 'What’s most important for you about photography?'
+      required: true
+      options:
+        - id: wall-art
+          label: Creating art I can hang on my wall
+        - id: moments-to-share
+          label: Creating moments I can share with the world
+        - id: documenting
+          label: Documenting my life
+
     - id: name
       type: text
       label: Name
       required: true
+
     - id: email
       type: email
       label: Email
       required: true
+
     - id: opt-in
       type: radio
-      label: Would you like to receive emails from our Partner brand?
+      label: Would you like to receive emails from Nikon?
       required: true
       options:
         - id: opt-in-true
@@ -75,6 +109,7 @@ competition-form:
         - id: opt-in-false
           label: 'No'
           value: 'no'
+
   submit: Submit Entry
   terms: >
     By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition

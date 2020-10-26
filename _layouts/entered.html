@@ -6,18 +6,25 @@
   <body class="no-js">
 
     {% include components/tracking.html %}
+    {% include page/header.html %}
+    <div class="site-header__offset"></div>
+    <div class="site-nav__offset"></div>
 
     <div class="content-spacing section-spacing">
-      <div class="container">
-        <div class="width width--md vpad--xxl">
-          <h1 class="title title--lg">{{page.title}}</h1>
-          <div class="space--xxs"></div>
-          <p class="text--xxl">{{page.intro}}</p>
-          <div class="space--md"></div>
-          <a href="{{page.cta.link | liquify}}" class="btn btn--orange">{{page.cta.text}}</a>
-        </div>
+
+      <div class="container container--xl vpad--xxl text--center">
+        <h1 class="title title--xl text--bold">{{page.title}}</h1>
+        {% if page.intro %}
+        <div class="space--xxs"></div>
+        <p class="text--xxl">{{page.intro}}</p>
+        {% endif %}
+        <div class="space--md"></div>
+        <a href="{{page.cta.link | liquify}}" class="btn btn--orange btn--lg">{{page.cta.text}}</a>
       </div>
+      {% include page/promo-nikon.html %}
+
     </div>
+    {% include page/footer.html %}
 
   </body>
 
