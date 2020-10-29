@@ -21,5 +21,9 @@
       width: 100%;
       padding-top: 100%;
     }
+    .text--center & {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
