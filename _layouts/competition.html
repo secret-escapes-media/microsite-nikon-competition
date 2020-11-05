@@ -2,17 +2,18 @@
 layout: default
 ---
 
-
-<div class="width width--xxl">
-  <div class="row row--constant-4-4-4 row--gutters-xl">
-    <div class="col">
-      <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize1.jpg');"></div>
-    </div>
-    <div class="col">
-      <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize2.jpg');"></div>
-    </div>
-    <div class="col">
-      <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize3.jpg');"></div>
+<div class="container">
+  <div class="width width--xxl">
+    <div class="row row--constant-4-4-4 row--gutters-xl">
+      <div class="col">
+        <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize1.jpg');"></div>
+      </div>
+      <div class="col">
+        <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize2.jpg');"></div>
+      </div>
+      <div class="col">
+        <div class="img img--circle" style="background-image: url('{{site.img}}/content/{{page.id}}/prize3.jpg');"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -46,11 +47,11 @@ layout: default
     </div>
 
     <div class="row row--no-gutters row--valign-center depth--md">
-      <div class="col col--6">
+      <div class="col col--xxl-6">
         <div class="img img--16-9" style="background-image: url({{site.img}}/content/{{page.id}}/nikon.jpg);"></div>
       </div>
-      <div class="col col--6">
-        <div class="hpad--md">
+      <div class="col col--xxl-6">
+        <div class="hpad--md vpad--sm">
           <h4 class="title title--sm text--bold">{{page.nikon.title}}</h4>
           <p>{{page.nikon.content}}</p>
         </div>
@@ -90,6 +91,7 @@ layout: default
             <div class="space--sm"></div>
             <p class="text--sm text--normal">{{form.terms}}</p>
             <div class="space--sm"></div>
+            <input class="js-form-entry-time" id="entry-time" name="entry-time" type="hidden">
             <button type="submit" class="c-button" disabled>{{form.submit}}</button>
           </div>
         </form>

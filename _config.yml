@@ -8,7 +8,7 @@ description: >
   The days are getting shorter. Make sure you're prepared for those golden landscapes with this incredible competition for aspiring photographers. Nikon and Secret Escapes have teamed up to offer you two unmissable British escapes: from country to coast, choose your luxury location and capture breathtaking landscapes with the Nikon Z 5 full frame, mirrorless camera and NIKKOR Z 24-50mm lens.
 
 # file paths
-url:     "http://mp.secretescapes.com" # the base hostname & protocol for your site
+url:     "https://mp.secretescapes.com" # the base hostname & protocol for your site
 baseurl: "/uk/2020/nikon-golden-hour" # the subpath of your site, e.g. /blog/
 img:     "/uk/2020/nikon-golden-hour/_assets/img"
 css:     "/uk/2020/nikon-golden-hour/_assets/css"
